@@ -1,0 +1,16 @@
+// FONTS
+// Import all webfonts here
+//https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+// @include font-face(ffw, fonts/ffw);
+
+@font-face {
+  font-family: 'ffw';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ffw.eot'); /* IE9 Compat Modes */
+  src: local('ffw'), local('ffw'),
+       url('../fonts/ffw.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/ffw.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/ffw.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/ffw.svg#ffw') format('svg'); /* Legacy iOS */
+}

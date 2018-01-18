@@ -1,0 +1,45 @@
+// Navigation.
+nav {
+  > ul > li {
+    display: inline-block;
+    margin-right: rem(10px);
+  }
+  ul {
+    li {
+      a {
+        padding: rem(5px 20px);
+        color: $white;
+        display: block;
+      }
+    }
+
+    li {
+      position: relative;
+
+      a {
+        padding: rem(20px);
+      }
+
+      ul {
+        position: absolute;
+        display: none;
+        width: 170px;
+        background-color: $gray-33;
+        z-index: 99;
+
+        li {
+          ul {
+            left: rem(170px);
+            top: 0;
+          }
+        }
+      }
+
+      &:hover {
+        > ul {
+          display: block;
+        }
+      }
+    }
+  }
+}

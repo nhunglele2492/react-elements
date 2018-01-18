@@ -1,0 +1,78 @@
+// INDEX
+// Please define all styles for the index page in this file.
+// For each new page template added to /templates/pages/*.twig,
+// please add a corresponding file in /assets/scss/pages/*.scss.
+
+.welcome-paragraph {
+  padding: rem(40px 0);
+}
+
+.sidebar-list {
+  position: fixed;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: white;
+
+  &__list {
+    padding: 20px 10px;
+    position: absolute;
+    left: -300px;
+    background: $white;
+    transition: left .5s ease;
+    width: 200px;
+    border: rem(1px) solid rgba($black, 0.2);
+
+    &.open {
+      left: 0;
+    }
+
+    li {
+      border-bottom: rem(1px) solid rgba($black, 0.2);
+
+      a {
+        color: $text-color;
+        padding: rem(8px 0);
+        display: block;
+      }
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    border: rem(1px) solid rgba($black, 0.2);
+    position: relative;
+    padding: rem(10px);
+    text-indent: -999em;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &:before {
+      @extend %icons;
+      @extend .icon-plus;
+      text-indent: 0;
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+      transition: transform 0.5s ease;
+    }
+
+    &.open {
+      transition: before 0.5s ease;
+      border-bottom: none;
+
+      &:before {
+        @extend .icon-minus;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}

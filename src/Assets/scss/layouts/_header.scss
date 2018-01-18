@@ -1,0 +1,22 @@
+.header {
+  background-color: $gray-33;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 40%;
+
+    img {
+      width: rem(140px);
+    }
+  }
+
+  nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
