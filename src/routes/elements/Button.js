@@ -19,7 +19,6 @@ export class Button extends Component {
     } = this.props;
 
     const classes = mapToCssModules(classNames(
-      'btn',
       `btn${outline ? '--outline' : ''}${modifier ? `-${modifier}` : ''}`,
       className ? `btn--${className}` : false,
     ));

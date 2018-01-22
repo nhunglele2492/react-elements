@@ -1,38 +1,17 @@
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
+
+import logo1 from '../../Assets/images/logo1.png';
 
 import NavBar from './Nav';
 
 var data = [
   {
-    "text": "Link 3",
-    "url": "#",
-    "submenu": [
-      {
-        "text": "Sublink 1",
-        "url": "#",
-        "submenu": [
-          {
-            "text": "SubSublink 1",
-            "url": "#"
-          }
-        ]
-      },
-      {
-        "text": "Sublink 2",
-        "url":"#",
-        "submenu": [
-          {
-            "text": "SubSublink 2",
-            "url": "#"
-          }
-        ]
-      }
-    ]
+    "text": "Page 1",
+    "url": "/page1",
   },
   {
-    "text": "Link 2",
-    "url": "#"
+    "text": "Page 2",
+    "url": "/page2"
   }
 ]
 
@@ -41,7 +20,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="container">
-          <div className="logo"><a href="/" title="Logo">FFWvn</a></div>
+          <div className="logo"><a href="/" title="Logo"><img src={logo1} alt=''/></a></div>
           <nav className="navigation">
             <NavBar items={data} />
           </nav>

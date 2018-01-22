@@ -1,6 +1,7 @@
 # Ignore paths that contain user-generated content.
 # Ignore sass cache
 /node_modules
+/package-lock.json
 
 # Ignore Vendor folder
 #react-app/src/Assets/vendor

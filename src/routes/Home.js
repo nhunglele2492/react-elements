@@ -1,11 +1,16 @@
 import React from 'react';
 
-// import CustomLinkExample from './sitewide/SideBar';
+import FormList from './components/FormList';
+import Heading from './components/Heading';
+import ListButton from './components/ListButton';
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
+        <Heading />
+        <ListButton />
+        <FormList />
       </div>
     )
   }
