@@ -6,11 +6,13 @@ const defaultProps = {
   title: 'Label'
 };
 
-const Label = (props) => (
-  <label
-    className={props.className}
-    htmlFor={props.htmlFor}></label>
-);
+class Label extends React.Component {
+  render() {
+    return (
+      <label htmlFor={this.props.htmlFor}>{this.props.label}</label>
+    )
+  }
+}
 
 Label.propTypes = {
   htmlFor: PropTypes.string.isRequired

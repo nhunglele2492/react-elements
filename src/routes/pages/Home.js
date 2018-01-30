@@ -1,32 +1,15 @@
 import React from 'react';
 
-import {
-  Route,
-  Link
-} from 'react-router-dom';
+import DefaultLayout from '../layout/DefaultLayout';
 
-export function mapToCssModules(className = '') {
-  return className.split(' ').map(c => c).join(' ');
-}
-
-export const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
-  <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
-    <div className={match ? 'active' : ''}>
-      <Link to={to}>{label}</Link>
-    </div>
-  )}/>
-)
-
-export class ContentModal extends React.Component {
-  render() {
-    return (
-      <div>{this.props.contentModal}</div>
-    )
-  }
-}
+import FormList from '../baseElements/FormList';
+import Heading from '../baseElements/Heading';
+import ListButton from '../baseElements/ListButton';
+import Table from '../baseElements/Table';
+import Links from '../baseElements/elements/Link';
 
 // Example Data
-export const tableData = {
+var tableData = {
   columns: ['Service', 'Cost/Unit', 'Unit', 'Units Requested'],
   rows: [{
     'Service': 'Veterinary Assitance',
@@ -80,3 +63,19 @@ export const tableData = {
     'Units Requested': 42
   }]
 };
+
+class Home extends React.Component {
+  render() {
+    return (
+      <DefaultLayout title="Home Page" container>
+          <Heading />
+          <Links/>
+          <ListButton />
+          <FormList />
+          <Table data={tableData}/>
+      </DefaultLayout>
+    )
+  }
+}
+
+export default Home;

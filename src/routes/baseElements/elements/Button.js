@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import classNames from 'classnames';
-import { mapToCssModules } from '../variables';
+import { mapToCssModules } from '../../variables';
 
 const defaultProps = {
   className: '',

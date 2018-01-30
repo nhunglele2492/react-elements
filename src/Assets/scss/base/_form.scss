@@ -33,3 +33,13 @@ input[type='submit'] {
 .form-textarea {
   @extend %form-text;
 }
+
+.form-item {
+  margin-bottom: rem(15px);
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+  color: $black;
+}

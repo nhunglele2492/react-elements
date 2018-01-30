@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import {OldSchoolMenuLink} from '../variables';
+
 class NavBar extends Component {
   generateItem(item, i){
     return <NavBarItem key={i} text={item.text} url={item.url} submenu={item.submenu} />
@@ -8,7 +10,7 @@ class NavBar extends Component {
     var items = this.props.items.map(this.generateItem);
     return (
       <ul className="menu">
-      {items}
+        {items}
       </ul>
     );
   }
@@ -41,7 +43,7 @@ class NavBarItem extends Component {
 class NavBarLink extends Component {
   render() {
     return (
-      <a href={this.props.url}>{this.props.text}</a>
+      <OldSchoolMenuLink to={this.props.url} label={this.props.text}/>
     );
   }
 }

@@ -20,13 +20,11 @@
     position: absolute;
     left: -300px;
     background: $white;
-    transition: left .5s ease;
+    transition: left 0.5s ease;
     width: 200px;
     border: rem(1px) solid rgba($black, 0.2);
 
-    &.open {
-      left: 0;
-    }
+
 
     li {
       border-bottom: rem(1px) solid rgba($black, 0.2);
@@ -64,8 +62,15 @@
       transform: translateY(-50%) rotate(0);
       transition: transform 0.5s ease;
     }
+  }
 
-    &.open {
+  &.open {
+    .sidebar-list__list {
+      left: 0;
+      transition: left 0.5s ease;
+    }
+
+    .sidebar-list__button {
       transition: before 0.5s ease;
       border-bottom: none;
 

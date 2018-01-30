@@ -1,0 +1,39 @@
+.block-cta {
+  &__inner {
+    @extend .container;
+    margin: 0 auto;
+    padding-bottom: rem(50px);
+    padding-top: rem(50px);
+    width: 100%;
+  }
+
+  &__content {
+    text-align: center;
+
+    @include susy-media(desktop) {
+      @include pad(1 of 12);
+    }
+
+    @include susy-media(desktopWide) {
+      @include pad(2 of 12);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(18px);
+    font-size: rem(26px);
+    line-height: 1.35;
+
+    @include susy-media(tablet) {
+      font-size: rem(31px);
+    }
+  }
+
+  &__link {
+    margin-top: rem(43px);
+  }
+
+  &__body {
+    line-height: 26px;
+  }
+}
